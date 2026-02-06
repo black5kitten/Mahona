@@ -227,14 +227,29 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 4rem 0 4rem;
-  p {
-    padding: 2rem 2rem 2rem 2rem;
-  }
 }
+
+.div-subclass1 > p,
+.admission1 > p {
+  font-family: "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #333;
+  text-align: justify;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f9f9f9;
+  padding: 0 0.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /*transform: skewX(-5deg);*/
+  font-style: italic;
+}
+
 .div-subclass2 {
   display: flex;
   justify-content: space-around;
-  margin: 1.5em;
+  margin: 0.5em;
 }
 .subclass-heading {
   width: 40%;
@@ -380,26 +395,56 @@ body {
 }
 .admission3 {
   height: 10%;
-  a {
-    display: block;
-    border-radius: 30px;
-    border: 2px solid #f20ca2;
-    width: 200px;
-    height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 50px;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bolder;
-    color: #f20ca2;
-  }
 }
+
+.admission3 > a {
+  display: block;
+  border-radius: 30px;
+  border: 2px solid #f20ca2;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #f20ca2;
+
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.admission3 > a:before {
+  border-radius: 30px;
+  border: 2px solid #f20ca2;
+  content: "More Classes";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f20ca2;
+  color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.admission3 > a:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
 .events {
   position: relative;
   width: 100%;
   height: 90vh; /* or any height you want */
   overflow: hidden;
+  margin-top: 1em;
 }
 
 .events > h1 {

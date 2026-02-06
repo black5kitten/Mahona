@@ -1,407 +1,640 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<html lang="en">
 
-    <link
-      rel="stylesheet"
-      href="style.mobile.css"
-      media="only screen and (max-width: 768px)"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vardan Academy - Where Every Child Shines</title>
 
-    <link
-      rel="stylesheet"
-      href="style.desktop.css"
-      media="only screen and (min-width: 769px)"
-    />
-    <title>Vardaan Acadmey</title>
-  </head>
-  <body>
-    <div class="header1">
-      <div class="subheader1">
-        <i class="fa-sharp fa-solid fa-location-dot"></i>
-        <h4>Mahona U.P</h4>
-      </div>
-      <div class="subheader2">
-        <i class="fa-sharp fa-solid fa-phone"></i>
-        <h4>999 99 999 99</h4>
-      </div>
-      <div class="subheader3">
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
-      </div>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-bg-primary text-gray-800">
+
+  <!-- Top Contact Bar with Glass Effect -->
+  <!-- Top Contact Bar - Sleek Pink Design -->
+  <div class="bg-[#ec4899] text-white py-2 px-4 text-sm font-medium flex justify-between items-center">
+    <div class="flex gap-6">
+      <span class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+        <i class="fa-solid fa-location-dot"></i> Mahona, U.P
+      </span>
+      <span class="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+        <i class="fa-solid fa-phone"></i> 999 99 999 99
+      </span>
+    </div>
+    <div class="flex gap-4">
+      <i class="fa-brands fa-x-twitter hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+      <i class="fa-brands fa-facebook hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+      <i class="fa-brands fa-instagram hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+      <i class="fa-brands fa-linkedin-in hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+    </div>
+  </div>
+
+  <!-- Header / Nav with Glassmorphism -->
+  <header class="glass-panel sticky top-0 z-50 shadow-soft">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo with Gradient - Clickable -->
+      <a href="#" class="grid grid-flow-col items-center gap-2 select-none cursor-pointer hover:opacity-80 transition">
+        <img src="/images/school-logo.png" alt="Logo" class="h-10 w-auto object-contain">
+        <div class="text-2xl md:text-3xl font-bold tracking-tight">
+          <span class="text-[#ec4899]">Var<span class="text-[#ec4899]">dan</span></span> <span
+            class="text-[#fbbf24]">Acad</span><span class="text-[#22d3ee]">emy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-8 font-medium text-gray-600 text-[15px]">
+        <a href="#about" class="hover:text-[#ec4899] transition-colors">About</a>
+        <a href="#facilities" class="hover:text-[#ec4899] transition-colors">Facilities</a>
+        <a href="#events" class="hover:text-[#ec4899] transition-colors">Events</a>
+        <a href="#gallery" class="hover:text-[#ec4899] transition-colors">Gallery</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="/admission.html"
+        class="hidden md:inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm tracking-wide">
+        Enroll Now
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle"
+        class="md:hidden text-2xl text-gray-700 focus:outline-none hover:text-brand-pink transition">
+        <i class="fa fa-bars"></i>
+      </button>
     </div>
 
-    <div class="header2">
-      <h1>
-        <img src="images/school-logo.png" />
-        <span class="main-blue">Var</span><span class="main-pink">dan</span>
-        <span class="main-yellow">Acad</span><span class="main-green">emy</span>
-      </h1>
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu"
+      class="hidden md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 flex-col p-4 shadow-lg absolute w-full left-0">
+      <a href="#about"
+        class="block py-3 px-4 hover:bg-brand-pink/10 hover:text-brand-pink rounded-lg transition">About</a>
+      <a href="#facilities"
+        class="block py-3 px-4 hover:bg-brand-blue/10 hover:text-brand-blue rounded-lg transition">Facilities</a>
+      <a href="#events"
+        class="block py-3 px-4 hover:bg-brand-green/10 hover:text-brand-green rounded-lg transition">Events</a>
+      <a href="#gallery"
+        class="block py-3 px-4 hover:bg-brand-yellow/10 hover:text-brand-yellow rounded-lg transition">Gallery</a>
+      <a href="#" class="block mt-2 text-center btn-primary">Enroll Now</a>
+    </nav>
+  </header>
 
-      <div class="nav-menu" id="desktop-nav">
-        <a href="#" class="menu-btn">Enroll Now</a>
-      </div>
+  <!-- Hero Section with Organic Shapes -->
+  <section class="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+    <!-- Animated Blob Backgrounds -->
+    <div class="blob blob-1 animate-blob"></div>
+    <div class="blob blob-2 animate-blob" style="animation-delay: 2s;"></div>
+    <div class="blob blob-3 animate-blob" style="animation-delay: 4s;"></div>
+
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=1920" alt="Happy Students"
+        class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 via-transparent to-brand-pink/20"></div>
     </div>
 
-    <div class="image-container">
-      <div class="container2">
-        <div class="side-label1 side">
-          <span>CBSE Board</span>
-          <span>Approved</span>
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="text-center md:text-left animate-fade-in-up">
+        <div
+          class="inline-block mb-4 px-4 py-2 bg-brand-yellow/20 backdrop-blur-sm rounded-full text-brand-yellow font-semibold text-sm border border-brand-yellow/30">
+          ✨ ICSE Approved Excellence
         </div>
-        <div class="side-label2 side">Class 12th</div>
-        <div class="side-label3 side">
-          <span>Computers</span>
-          <span>Studies</span>
-        </div>
-      </div>
-      <img
-        src="images/hero_image_school_kids.jpg"
-        class="rounded-image"
-        alt="Hero"
-      />
-      <div class="overlay-text">
-        <h1>Quality</h1>
-        <h1>Education</h1>
-        <h3>for every child</h3>
-        <div class="anchorbtn">
-          <a href="#">Explore Classes</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="div-classes">
-      <div class="div-subclass1">
-        <h1>
-          Welcome to <span class="main-blue">Vardan </span
-          ><span class="main-pink">Academy</span>
-        </h1>
-        
-        <p>
-          Nestled in the greenery of Mahona (U.P, India), our school provides a
-          comprehensive educational journey from kindergarten through senior
-          secondary school. Renowned for its rigorous academic standards, we
-          consistently excel in both scholastic competitions and sporting
-          events. Our students benefit from state-of-the-art facilities,
-          including well-equipped laboratories, modern classrooms, an extensive
-          library, and dedicated computer labs fostering digital literacy from
-          an early age. This nurturing environment promotes holistic growth and
-          achievement in all spheres.
-          
-          <ul class="only-mobile-ul">
-            Our salient features:
-            
-            <li><i class="fa-sharp fa-solid fa-book fa-1x"></i>CBSE Board approved</li>
-            <li><i class="fa-sharp fa-solid fa-computer fa-1x"></i>Computer classes for all students</li>
-            <li><i class="fa-sharp fa-solid fa-basketball fa-1x"></i>Annual School Sports</li>
-            <li><i class="fa-sharp fa-solid fa-medal fa-1x"></i>Competitions</li>
-          </ul>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <span class="gradient-text">Learning Made</span><br>
+          <span class="text-brand-dark">Fun & Inspiring</span>
+        </h2>
+        <p class="text-lg md:text-xl text-white mb-8 leading-relaxed drop-shadow-lg">
+          Where every child shines with <span class="font-semibold text-brand-yellow">confidence</span>,
+          <span class="font-semibold text-white">curiosity</span>, and
+          <span class="font-semibold text-brand-green">creativity</span>.
         </p>
-      </div>
-      <div class="div-subclass2">
-        <div class="subclass-heading">
-          <div class="sports">
-            <i class="fa-sharp fa-solid fa-basketball fa-5x"></i>
-            <div class="sports-text">
-              <h4>School Sports</h4>
-              <p>
-                Our school is a hub of vibrant sporting activity, fostering
-                teamwork, discipline, and athletic achievement across various
-                disciplines.
-              </p>
-            </div>
-          </div>
-
-          <div class="computer">
-            <i class="fa-sharp fa-solid fa-computer fa-5x"></i>
-            <div class="computer-text">
-              <h4>Computers</h4>
-              <p>
-                Our school provides comprehensive computer education, equipping
-                students with essential digital skills for the modern world.
-              </p>
-            </div>
-          </div>
-
-          <div class="competitions">
-            <i class="fa-sharp fa-solid fa-medal fa-5x"></i>
-            <div class="competitions-text">
-              <h4>Competitions</h4>
-              <p>
-                Our school actively participates and excels in a wide array of
-                academic and extracurricular competitions, fostering a spirit of
-                healthy rivalry and achievement.
-              </p>
-            </div>
-          </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="/classes.html" class="btn-primary inline-flex items-center justify-center gap-2">
+            <span>Explore Classes</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#facilities"
+            class="glass-panel px-6 py-3 rounded-full font-semibold text-brand-dark hover:shadow-medium transition-all hover:-translate-y-1 inline-flex items-center justify-center gap-2">
+            <span>Our Facilities</span>
+            <i class="fa-solid fa-building-columns"></i>
+          </a>
         </div>
-        <div class="subclass-img">
-          <img src="images/hero_img_girl_studying.png" />
+      </div>
+
+      <!-- Floating Image Card -->
+      <div class="hidden md:block relative animate-float">
+        <div class="glass-panel rounded-3xl p-6 shadow-large">
+          <img src="/images/childrenstudying.png" alt="Students Learning" class="rounded-2xl w-full" />
+          <!-- Floating Stats -->
+          <div
+            class="absolute -bottom-1 -left-10 rounded-2xl p-4 shadow-medium text-center border-2 border-blue-200 bg-white/70 backdrop-blur-md">
+            <div class="text-3xl font-bold text-brand-pink">500+</div>
+            <div class="text-sm text-gray-600">Happy Students</div>
+          </div>
+
+          <div
+            class="absolute -top-6 -right-2 rounded-2xl p-4 shadow-medium text-center border-2 border-pink-200 bg-white/70 backdrop-blur-md">
+            <div class="text-3xl font-bold text-brand-blue">25+</div>
+            <div class="text-sm text-gray-600">Expert Teachers</div>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="div-admissions">
-      <div class="admission1">
-        <h1>Facilities we offer</h1>
-        <p>
-          Our commitment to holistic education is reflected in our modern
-          infrastructure, which includes well-equipped chemistry and biology
-          laboratories for hands-on scientific exploration, dedicated computer
-          labs fostering digital literacy, and bright, spacious classrooms
-          conducive to effective learning. These facilities provide students
-          with an enriching environment to excel academically and develop
-          essential skills for the future.
+
+    <!-- Wave Divider -->
+    <div class="absolute bottom-0 w-full leading-[0]">
+      <svg viewBox="0 0 1440 120" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#F8FAFC" fill-opacity="1"
+          d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,58.7C672,64,768,96,864,96C960,96,1056,64,1152,53.3C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section with Enhanced Layout -->
+  <section id="about" class="pt-2 pb-6 md:pt-4 md:pb-12 max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <!-- Image with Decorative Elements -->
+      <div class="relative">
+        <div
+          class="absolute -inset-4 bg-gradient-to-r from-brand-pink/20 to-brand-blue/20 rounded-3xl rotate-3 blur-xl">
+        </div>
+        <img src="/images/classgoingon.png" alt="Classroom"
+          class="relative rounded-3xl shadow-large w-full hover-lift" />
+      </div>
+
+      <!-- Text Content -->
+      <div class="space-y-4 animate-fade-in-up">
+        <div class="inline-block px- py-2 bg-brand-blue/10 rounded-full text-brand-blue font-semibold text-sm">
+          <!--About Us-->
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+          Welcome to <span class="gradient-text">Vardan Academy</span>
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          From kindergarten to senior school, we blend strong academics with sports, arts, and digital skills — all in a
+          safe, nurturing environment.
         </p>
-      </div>
-      <div class="admission2">
-        <button class="carousel-btn left" onclick="scrollCarousel(this, -1)">
-          ‹
-        </button>
-
-        <div class="carousel">
-          <div class="card">
-            <img class="card-img-top" src="images/computerlab.avif" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Computer Lab</h4>
-              <p>
-                Our modern computer lab equips students with essential digital
-                skills.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card-img-top" src="images/physicslab.jpeg" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Physics Lab</h4>
-              <p>Explore the principles of physics in our comprehensive lab.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card-img-top" src="images/chemistrylab.jpeg" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Chemistry Lab</h4>
-              <p>
-                Hands-on learning comes alive in our well-equipped chemistry
-                lab.
-              </p>
-              
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card-img-top" src="images/biologylab.jpeg" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Biology Lab</h4>
-              <p>
-                Our biology lab offers a space for engaging in scientific
-                discovery.
-              </p>
-              
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card-img-top" src="images/library.jpeg" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Library</h4>
-              <p>
-                Our extensive library fosters a love for reading and research.
-              </p>
-              
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-btn right" onclick="scrollCarousel(this, 1)">
-          ›
-        </button>
-      </div>
-      <div class="admission3">
-        <a href="#" alt="classes">More Classes</a>
-      </div>
-    </div>
-    
-    <div class="events">
-      <h1>Upcoming Events</h1>
-      <img src="images/event_background.jpeg" alt="Event" class="event-bg" />
-      <div class="specific-event">
-        <h4>15th August 2025</h4>
-        <h1>Indian Independence</h1>
-        <p>
-          Event Description Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Ducimus ipsum laboriosam aperiam est esse necessitatibus
-          sapiente minima, delectus dicta, itaque atque quas assumenda nemo qui
-          temporibus non sint illum nisi.
+        <p class="text-gray-600 leading-relaxed">
+          Nestled in the greenery of Mahona (U.P, India), our school provides a comprehensive educational journey with
+          state-of-the-art facilities and dedicated educators.
         </p>
-        <a href="#">View past Events</a>
+
+        <!-- Feature Pills -->
+        <div class="flex flex-wrap gap-3">
+          <span class="feature-pill bg-blue-50 text-brand-blue">
+            <i class="fa-solid fa-book"></i>
+            <span>ICSE Approved</span>
+          </span>
+          <span class="feature-pill bg-pink-50 text-brand-pink">
+            <i class="fa-solid fa-computer"></i>
+            <span>Computer Labs</span>
+          </span>
+          <span class="feature-pill bg-green-50 text-brand-green">
+            <i class="fa-solid fa-basketball"></i>
+            <span>Sports Programs</span>
+          </span>
+          <span class="feature-pill bg-yellow-50 text-brand-yellow">
+            <i class="fa-solid fa-medal"></i>
+            <span>Competitions</span>
+          </span>
+          <span class="feature-pill bg-blue-50 text-brand-blue">
+            <i class="fa-solid fa-flask"></i>
+            <span>Science Labs</span>
+          </span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="testimonials">
-      <h1>Testimonials</h1>
-      <div class="single-testimonial">
-        <button class="carousel-btn left" onclick="scrollCarousel(this, -1)">
-          ‹
-        </button>
-        <div class="carousel">
-          <div class="card">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis, exercitationem reiciendis nostrum assumenda itaque,
-              quam culpa recusandae unde a commodi earum dolor modi blanditiis
-              beatae repellat id asperiores quas distinctio.
-            </p>
-            <hr />
-            <h4>Parent1</h4>
-          </div>
+  <!-- Features Cards with Premium Design -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-bg-secondary to-white relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-pink/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
 
-          <div class="card">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis, exercitationem reiciendis nostrum assumenda itaque,
-              quam culpa recusandae unde a commodi earum dolor modi blanditiis
-              beatae repellat id asperiores quas distinctio.
-            </p>
-            <hr />
-            <h4>Parent2</h4>
-          </div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
+        <p class="text-gray-600 text-lg">Excellence in education with modern facilities</p>
+      </div>
 
-          <div class="card">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis, exercitationem reiciendis nostrum assumenda itaque,
-              quam culpa recusandae unde a commodi earum dolor modi blanditiis
-              beatae repellat id asperiores quas distinctio.
-            </p>
-            <hr />
-            <h4>Parent3</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="card-premium group border-2 border-pink-500">
+          <div class="p-8 text-center">
+            <div
+              class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-pink to-pink-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
+              <i class="fa-solid fa-book text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">ICSE Approved</h3>
+            <p class="text-gray-600 leading-relaxed">Quality curriculum recognized nationwide, ensuring your child's
+              bright future.</p>
           </div>
         </div>
 
-        <button class="carousel-btn right" onclick="scrollCarousel(this, 1)">
-          ›
-        </button>
+        <!-- Card 2 -->
+        <div class="card-premium group border-2 border-blue-600">
+          <div class="p-8 text-center">
+            <div
+              class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-blue to-blue-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
+              <i class="fa-solid fa-computer text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Digital Learning</h3>
+            <p class="text-gray-600 leading-relaxed">Modern computer labs and tech education preparing students for
+              tomorrow.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-premium group border-2 border-teal-500">
+          <div class="p-8 text-center">
+            <div
+              class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-green to-teal-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
+              <i class="fa-solid fa-basketball text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Sports & Fitness</h3>
+            <p class="text-gray-600 leading-relaxed">Comprehensive sports programs fostering teamwork and physical
+              wellness.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="photogallery">
-      <h1>Photo Gallery</h1>
-      <div class="photogallery-images">
-      <img src="images/hero_image_school_kids.jpg" />
-      <img src="images/event_background.jpeg" />
-      <img src="images/hero_img_girl_studying.png" />
-      <img src="images/biologylab.jpeg" />
-      <img src="images/library.jpeg" />
+  <!-- Facilities Section -->
+  <section id="facilities" class="py-12 md:py-20 bg-bg-primary">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <div class="inline-block px-4 py-2 bg-brand-green/10 rounded-full text-brand-green font-semibold text-sm mb-4">
+          <!--Our Infrastructure -->
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">World-Class Facilities</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">State-of-the-art infrastructure designed for holistic
+          learning and development</p>
+      </div>
+
+      <div class="relative group">
+        <!-- Navigation Buttons -->
+        <button id="facilities-prev"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-blue hover:scale-110 transition-all cursor-pointer opacity-0 group-hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-chevron-left text-xl"></i>
+        </button>
+        <button id="facilities-next"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-blue hover:scale-110 transition-all cursor-pointer opacity-0 group-hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-chevron-right text-xl"></i>
+        </button>
+
+        <!-- Carousel Container -->
+        <div id="facilities-carousel"
+          class="flex overflow-x-auto gap-6 py-4 scroll-smooth no-scrollbar snap-x snap-mandatory px-4">
+
+          <!-- Facility Card 1 -->
+          <div class="carousel-facilities-item card-premium group cursor-pointer snap-start">
+            <div class="h-48 overflow-hidden">
+              <img src="/images/computerlab.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Computer Lab">
+            </div>
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-blue/10 flex items-center justify-center">
+                <i class="fa-solid fa-computer text-brand-blue text-xl"></i>
+              </div>
+              <p class="font-bold text-gray-800">Computer Lab</p>
+              <p class="text-sm text-gray-500 mt-1">Modern tech education</p>
+            </div>
+          </div>
+
+          <!-- Facility Card 2 -->
+          <div class="carousel-facilities-item card-premium group cursor-pointer snap-start">
+            <div class="h-48 overflow-hidden">
+              <img src="/images/physicslab.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Physics Lab">
+            </div>
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-pink/10 flex items-center justify-center">
+                <i class="fa-solid fa-flask text-brand-pink text-xl"></i>
+              </div>
+              <p class="font-bold text-gray-800">Physics Lab</p>
+              <p class="text-sm text-gray-500 mt-1">Hands-on experiments</p>
+            </div>
+          </div>
+
+          <!-- Facility Card 3 -->
+          <div class="carousel-facilities-item card-premium group cursor-pointer snap-start">
+            <div class="h-48 overflow-hidden">
+              <img src="/images/chemistrylab.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Chemistry Lab">
+            </div>
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-green/10 flex items-center justify-center">
+                <i class="fa-solid fa-atom text-brand-green text-xl"></i>
+              </div>
+              <p class="font-bold text-gray-800">Chemistry Lab</p>
+              <p class="text-sm text-gray-500 mt-1">Scientific discovery</p>
+            </div>
+          </div>
+
+          <!-- Facility Card 4 -->
+          <div class="carousel-facilities-item card-premium group cursor-pointer snap-start">
+            <div class="h-48 overflow-hidden">
+              <img src="/images/biologylab.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Library">
+            </div>
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-yellow/10 flex items-center justify-center">
+                <i class="fa-solid fa-book-open text-brand-yellow text-xl"></i>
+              </div>
+              <p class="font-bold text-gray-800">Biology Lab</p>
+              <p class="text-sm text-gray-500 mt-1">Understanding Life</p>
+            </div>
+          </div>
+
+          <!-- Facility Card 5 -->
+          <div class="carousel-facilities-item card-premium group cursor-pointer snap-start">
+            <div class="h-48 overflow-hidden">
+              <img src="/images/library.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Library">
+            </div>
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-yellow/10 flex items-center justify-center">
+                <i class="fa-solid fa-book-open text-brand-yellow text-xl"></i>
+              </div>
+              <p class="font-bold text-gray-800">Library</p>
+              <p class="text-sm text-gray-500 mt-1">Vast collection</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- Events Section with Modern Card -->
+  <section id="events"
+    class="py-12 md:py-20 bg-gradient-to-br from-brand-green/10 to-brand-blue/10 relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-pink/5 rounded-full blur-3xl">
     </div>
 
-    <div class="footer">
-      <div class="main-footer">
-        <div class="footer-school">
-          <h1>
-            <span class="main-blue">Var</span
-            ><span class="main-pink">dan</span>
-            <span class="main-yellow">Acad</span
-            ><span class="main-green">emy</span>
-          </h1>
-          <p>
-            Are you seeking a nurturing yet challenging academic environment
-            with exceptional opportunities in sports and well-equipped
-            facilities? Discover how our school can empower your child's
-            holistic growth and future success.
+    <div class="max-w-5xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Upcoming Events</h2>
+      </div>
+
+      <div class="card-premium overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="h-64 md:h-auto overflow-hidden">
+            <img src="/images/event_background.jpeg" class="w-full h-full object-cover" alt="Event">
+          </div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <div
+              class="inline-block self-start px-4 py-2 bg-brand-pink rounded-full text-white text-sm font-semibold mb-4">
+              <i class="fa-solid fa-calendar-days mr-2"></i>February 25th 2026
+            </div>
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">School Annual Function 2026</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Join us for a day of fun, entertainment, and celebration
+              as we showcase the talents of our students. </p>
+            <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all">
+              <span>View Past Events</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials with Enhanced Design -->
+  <section class="py-12 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-block px-4 py-2 bg-brand-yellow/10 rounded-full text-brand-yellow font-semibold text-sm mb-4">
+        <!--Testimonials-->
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">What Parents Say</h2>
+      <p class="text-gray-600 text-lg mb-1">Real stories from our community</p>
+
+      <div class="testimonial-carousel relative h-64 md:h-48">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card absolute inset-0 transition-opacity duration-500 opacity-100">
+          <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-medium">
+            <p class="text-xl md:text-2xl font-light text-gray-700 italic mb-6">A warm, creative, and caring
+              environment. My child absolutely loves coming to school every day!</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-pink to-pink-400"></div>
+              <div class="text-left">
+                <p class="font-bold text-brand-pink">Anjali Mehta</p>
+                <p class="text-sm text-gray-500">Parent, Grade 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card absolute inset-0 transition-opacity duration-500 opacity-0">
+          <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-medium">
+            <p class="text-xl md:text-2xl font-light text-gray-700 italic mb-6">Great academics and incredibly
+              supportive teachers. The best choice we made for our son's education.</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-blue to-blue-400"></div>
+              <div class="text-left">
+                <p class="font-bold text-brand-blue">Rajeev Menon</p>
+                <p class="text-sm text-gray-500">Parent, Grade 6</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card absolute inset-0 transition-opacity duration-500 opacity-0">
+          <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-medium">
+            <p class="text-xl md:text-2xl font-light text-gray-700 italic mb-6">Our daughter has grown remarkably in
+              confidence, skills, and character. Truly exceptional!</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-green to-teal-400"></div>
+              <div class="text-left">
+                <p class="font-bold text-brand-green">Farah Khan</p>
+                <p class="text-sm text-gray-500">Parent, Grade 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery with Modern Grid -->
+  <section id="gallery" class="py-12 md:py-16 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Moments That Matter</h2>
+        <p class="text-gray-600 text-lg">Capturing joy, learning, and growth</p>
+      </div>
+
+      <div class="relative group">
+        <!-- Navigation Buttons -->
+        <button id="gallery-prev"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-blue hover:scale-110 transition-all cursor-pointer opacity-0 group-hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-chevron-left text-xl"></i>
+        </button>
+        <button id="gallery-next"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-blue hover:scale-110 transition-all cursor-pointer opacity-0 group-hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-chevron-right text-xl"></i>
+        </button>
+
+        <!-- Carousel Container -->
+        <div id="gallery-carousel"
+          class="flex overflow-x-auto gap-4 py-4 scroll-smooth no-scrollbar snap-x snap-mandatory">
+          <!-- Images will be populated by JS for infinite-like scrolling feeling or just hardcoded for now -->
+          <!-- We need 4 visible. Let's add more placeholders to simulate large number -->
+
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image1.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image1">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image2.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image2">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image3.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image3">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image4.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image4">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image5.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image5">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image6.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image6">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image7.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image7">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image8.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image8">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image9.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image9">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image10.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image10">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image11.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image11">
+          </div>
+          <div class="carousel-item card-premium overflow-hidden aspect-square snap-start">
+            <img src="./images/gallery/image12.jpeg"
+              class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+              alt="image12">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Modern Design -->
+  <!-- Footer with Modern Design -->
+  <footer class="bg-brand-dark text-white py-16 relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-pink/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+        <!-- Brand Column (Left) -->
+        <div class="md:w-5/12">
+          <h3 class="text-3xl font-bold mb-4">
+            <span class="text-pink-400">Vardan</span> <span class="text-yellow-300">Acad</span><span
+              class="text-cyan-300">emy</span>
+          </h3>
+          <p class="text-cyan-300 leading-relaxed mb-8 font-medium">
+            Are you seeking a nurturing yet challenging academic environment with exceptional opportunities in sports
+            and well-equipped facilities? Discover how our school can empower your child's holistic growth and future
+            success.
           </p>
-          <div class="footer-icons">
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
+          <div class="flex gap-8 items-center">
+            <a href="#" class="text-white hover:text-cyan-300 transition-colors transform hover:scale-110">
+              <i class="fa-brands fa-x-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-brand-blue transition-colors transform hover:scale-110">
+              <i class="fa-brands fa-facebook text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-brand-pink transition-colors transform hover:scale-110">
+              <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-brand-green transition-colors transform hover:scale-110">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
           </div>
         </div>
-        <div class="footer-quicklinks">
-          <h2>Quick links</h2>
-          <a href="#" alt="">Classes</a>
-          <a href="#" alt="">Enrollments</a>
-          <a href="#" alt="">Admission</a>
-        </div>
-        <div class="footer-aboutus">
-          <h2>About us</h2>
-          <a href="#" alt="">Facilities</a>
-          <a href="#" alt="">Teachers</a>
-          <a href="#" alt="">Vacancies</a>
+
+        <!-- Links Columns (Right) -->
+        <div class="md:w-5/12 flex flex-col md:flex-row gap-12 md:gap-24">
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-bold mb-6 text-xl text-yellow-300">Quick links</h4>
+            <div class="flex flex-col gap-4">
+              <a href="/classes.html"
+                class="text-pink-300 hover:text-pink-400 transition-colors font-medium">Classes</a>
+              <a href="/admission.html"
+                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Admission</a>
+            </div>
+          </div>
+
+          <!-- About Us -->
+          <div>
+            <h4 class="font-bold mb-6 text-xl text-white">About us</h4>
+            <div class="flex flex-col gap-4">
+              <a href="/#facilities"
+                class="text-pink-300 hover:text-yellow-300 transition-colors font-medium">Facilities</a>
+              <a href="/vacancies.html"
+                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Vacancies</a>
+            </div>
+          </div>
         </div>
       </div>
-      <p>Copyright © 2025 Vardan Academy. All rights reserved.</p>
+
+      <!-- Bottom Bar -->
+      <div class="text-center mt-16 pt-8 border-t border-white/10">
+        <p class="text-yellow-300 text-sm">
+          Copyright &copy; 2025 <span class="text-pink-400 font-semibold">Vardan Academy</span>. All rights reserved.
+        </p>
+      </div>
     </div>
+  </footer>
 
-    <script>
-      function scrollCarousel(button, direction) {
-        const carousel = button.parentElement.querySelector(".carousel");
-        const card = carousel.querySelector(".card");
-        // This part is for the "Facilities we offer" carousel, which still has buttons
-        const scrollAmount = card.offsetWidth + 16; // width + gap
-        carousel.scrollBy({
-          left: direction * scrollAmount,
-          behavior: "smooth",
-        });
-      }
-    
-      function toggleNav() {
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("active");
-      }
-    
-      function toggleMobileNav() {
-        const mobileNav = document.getElementById("mobile-nav");
-        mobileNav.classList.toggle("active");
-      }
-    
-      // --- New JavaScript for Testimonials Carousel (Auto-Rotation) ---
-    
-      const testimonialCards = document.querySelectorAll(
-        ".single-testimonial .card"
-      );
-      let currentTestimonialIndex = 0;
-      const testimonialIntervalTime = 5000; // 5000 milliseconds = 5 seconds
-    
-      function showTestimonial(index) {
-        testimonialCards.forEach((card, i) => {
-          if (i === index) {
-            card.classList.add("active");
-          } else {
-            card.classList.remove("active");
-          }
-        });
-      }
-    
-      function nextTestimonial() {
-        currentTestimonialIndex =
-          (currentTestimonialIndex + 1) % testimonialCards.length;
-        showTestimonial(currentTestimonialIndex);
-      }
-    
-      // Initialize: Show the first testimonial when the page loads and start rotation
-      if (testimonialCards.length > 0) {
-        showTestimonial(currentTestimonialIndex);
-        // Only start the interval if we are on a mobile screen
-        // This is a common way to check for mobile in JS, though CSS media query is more direct.
-        // For simplicity with your current setup, we'll assume this script runs on mobile.
-        // If you need a more robust check, you'd combine it with window.matchMedia
-        // but given your stylesheet setup, this script would likely only run on mobile or be active there.
-        setInterval(nextTestimonial, testimonialIntervalTime);
-      }
-    </script>
 
-    <script src="index.js" charset="utf-8"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

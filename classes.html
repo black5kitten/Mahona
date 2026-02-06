@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Classes - Vardan Academy</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-bg-primary text-gray-800 font-sans">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-[#ec4899] text-white py-2 px-4 text-sm font-medium flex justify-between items-center">
+        <div class="flex gap-6">
+            <span class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+                <i class="fa-solid fa-location-dot"></i> Mahona, U.P
+            </span>
+            <span class="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+                <i class="fa-solid fa-phone"></i> 999 99 999 99
+            </span>
+        </div>
+        <div class="flex gap-4">
+            <i
+                class="fa-brands fa-x-twitter hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+            <i
+                class="fa-brands fa-facebook hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+            <i
+                class="fa-brands fa-instagram hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+            <i
+                class="fa-brands fa-linkedin-in hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="glass-panel sticky top-0 z-50 shadow-soft">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/"
+                class="grid grid-flow-col items-center gap-2 select-none cursor-pointer hover:opacity-80 transition">
+                <img src="/images/school-logo.png" alt="Logo" class="h-10 w-auto object-contain">
+                <div class="text-2xl md:text-3xl font-bold tracking-tight">
+                    <span class="text-[#ec4899]">Var<span class="text-[#ec4899]">dan</span></span> <span
+                        class="text-[#fbbf24]">Acad</span><span class="text-[#22d3ee]">emy</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 font-medium text-gray-600 text-[15px]">
+                <a href="/#about" class="hover:text-[#ec4899] transition-colors">About</a>
+                <a href="/#facilities" class="hover:text-[#ec4899] transition-colors">Facilities</a>
+                <a href="/#events" class="hover:text-[#ec4899] transition-colors">Events</a>
+                <a href="/#gallery" class="hover:text-[#ec4899] transition-colors">Gallery</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="/admission.html"
+                class="hidden md:inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm tracking-wide">
+                Enroll Now
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle"
+                class="md:hidden text-2xl text-gray-700 focus:outline-none hover:text-brand-pink transition">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <nav id="mobile-menu"
+            class="hidden md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 flex-col p-4 shadow-lg absolute w-full left-0">
+            <a href="/#about"
+                class="block py-3 px-4 hover:bg-brand-pink/10 hover:text-brand-pink rounded-lg transition">About</a>
+            <a href="/#facilities"
+                class="block py-3 px-4 hover:bg-brand-blue/10 hover:text-brand-blue rounded-lg transition">Facilities</a>
+            <a href="/#events"
+                class="block py-3 px-4 hover:bg-brand-green/10 hover:text-brand-green rounded-lg transition">Events</a>
+            <a href="/#gallery"
+                class="block py-3 px-4 hover:bg-brand-yellow/10 hover:text-brand-yellow rounded-lg transition">Gallery</a>
+            <a href="/admission.html" class="block mt-2 text-center btn-primary">Enroll Now</a>
+        </nav>
+    </header>
+
+    <!-- Page Content -->
+    <main class="min-h-screen pb-20">
+
+        <!-- Hero Header -->
+        <section class="bg-gradient-to-br from-indigo-50 to-white py-16 md:py-20 text-center relative overflow-hidden">
+            <!-- Blobs -->
+            <div
+                class="absolute top-0 left-0 w-64 h-64 bg-brand-pink/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <div
+                    class="inline-block px-4 py-2 bg-brand-yellow/10 rounded-full text-brand-yellow font-bold text-sm mb-4">
+                    ACADEMIC PROGRAMS
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Explore Our Classes</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Discover learning programs designed for every stage of your child’s growth, from their first steps
+                    in school
+                    to stepping out into the world.
+                </p>
+            </div>
+        </section>
+
+        <!-- Class Cards Grid -->
+        <section class="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Pre-Primary Card -->
+                <article
+                    class="bg-white rounded-3xl shadow-large overflow-hidden border-2 border-brand-pink hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-brand-pink/10 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-pink/5 group-hover:bg-brand-pink/20 transition-colors">
+                        </div>
+                        <i
+                            class="fa-solid fa-shapes text-5xl text-brand-pink transform group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm border border-gray-100">
+                            Ages 3-5
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Pre-Primary</h3>
+                        <p class="text-brand-pink font-medium text-sm mb-4">Nursery • LKG • UKG</p>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Focus on foundational literacy, numeracy, creativity, and social skills through play-based
+                            learning.
+                        </p>
+                        <button onclick="openModal('pre-primary')"
+                            class="w-full py-3 rounded-xl border-2 border-brand-pink text-brand-pink font-bold hover:bg-brand-pink hover:text-white transition-all">
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Primary School Card -->
+                <article
+                    class="bg-white rounded-3xl shadow-large overflow-hidden border-2 border-brand-blue hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-brand-blue/10 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-blue/5 group-hover:bg-brand-blue/20 transition-colors">
+                        </div>
+                        <i
+                            class="fa-solid fa-book-open-reader text-5xl text-brand-blue transform group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm border border-gray-100">
+                            Ages 6-10
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Primary School</h3>
+                        <p class="text-brand-blue font-medium text-sm mb-4">Class 1 – Class 5</p>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Building strong fundamentals in languages, mathematics, basic science, and essential life
+                            skills.
+                        </p>
+                        <button onclick="openModal('primary')"
+                            class="w-full py-3 rounded-xl border-2 border-brand-blue text-brand-blue font-bold hover:bg-brand-blue hover:text-white transition-all">
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Middle School Card -->
+                <article
+                    class="bg-white rounded-3xl shadow-large overflow-hidden border-2 border-brand-green hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-brand-green/10 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-green/5 group-hover:bg-brand-green/20 transition-colors">
+                        </div>
+                        <i
+                            class="fa-solid fa-microscope text-5xl text-brand-green transform group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm border border-gray-100">
+                            Ages 11-13
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Middle School</h3>
+                        <p class="text-brand-green font-medium text-sm mb-4">Class 6 – Class 8</p>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Concept-based learning, practical laboratory activities, and subject exploration for deeper
+                            understanding.
+                        </p>
+                        <button onclick="openModal('middle')"
+                            class="w-full py-3 rounded-xl border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Secondary School Card -->
+                <article
+                    class="bg-white rounded-3xl shadow-large overflow-hidden border-2 border-brand-yellow hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-brand-yellow/10 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-brand-yellow/5 group-hover:bg-brand-yellow/20 transition-colors">
+                        </div>
+                        <i
+                            class="fa-solid fa-graduation-cap text-5xl text-brand-yellow transform group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm border border-gray-100">
+                            Ages 14-18
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Secondary</h3>
+                        <p class="text-brand-yellow font-medium text-sm mb-4">Class 9 – Class 12</p>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Academic excellence, board exam preparation, and career-oriented guidance for future
+                            success.
+                        </p>
+                        <button onclick="openModal('secondary')"
+                            class="w-full py-3 rounded-xl border-2 border-brand-yellow text-brand-yellow font-bold hover:bg-brand-yellow hover:text-white transition-all">
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="max-w-4xl mx-auto px-4 mt-8 text-center">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-gray-100">
+                <!-- Decoration -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2">
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-[#06b6d4] mb-6 relative z-10">Interested in admission?
+                </h2>
+                <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto relative z-10">
+                    Take the first step towards your child's bright future. Enroll today!
+                </p>
+                <a href="/admission.html"
+                    class="inline-block relative z-10 bg-[#22d3ee] hover:bg-[#06b6d4] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
+                    Enroll Now
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modals Container -->
+    <div id="modal-container"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        <!-- Modal Content -->
+        <div
+            class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl relative transform scale-95 transition-transform duration-300 overflow-hidden flex flex-col max-h-[90vh]">
+
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-gray-600"></i>
+            </button>
+
+            <!-- Modal Body (Dynamic Content) -->
+            <div id="modal-content" class="overflow-y-auto p-8 md:p-10">
+                <!-- Content injected by JS -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-gray-100 bg-gray-50 flex justify-end">
+                <button onclick="closeModal()"
+                    class="px-6 py-2 rounded-lg text-gray-600 font-medium hover:bg-gray-200 transition-colors">Close</button>
+                <a href="/admission.html"
+                    class="ml-4 px-6 py-2 rounded-lg bg-brand-blue text-white font-medium hover:bg-blue-600 transition-colors shadow-md">Apply
+                    Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-pink/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+                <!-- Brand Column (Left) -->
+                <div class="md:w-5/12">
+                    <h3 class="text-3xl font-bold mb-4">
+                        <span class="text-pink-400">Vardan</span> <span class="text-yellow-300">Acad</span><span
+                            class="text-cyan-300">emy</span>
+                    </h3>
+                    <p class="text-cyan-300 leading-relaxed mb-8 font-medium">
+                        Are you seeking a nurturing yet challenging academic environment with exceptional opportunities
+                        in sports and well-equipped facilities? Discover how our school can empower your child's
+                        holistic growth and future success.
+                    </p>
+                    <div class="flex gap-8 items-center">
+                        <a href="#" class="text-white hover:text-cyan-300 transition-colors transform hover:scale-110">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-brand-blue transition-colors transform hover:scale-110">
+                            <i class="fa-brands fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-brand-pink transition-colors transform hover:scale-110">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-brand-green transition-colors transform hover:scale-110">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Columns (Right) -->
+                <div class="md:w-5/12 flex flex-col md:flex-row gap-12 md:gap-24">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-bold mb-6 text-xl text-yellow-300">Quick links</h4>
+                        <div class="flex flex-col gap-4">
+                            <a href="/classes.html"
+                                class="text-pink-300 hover:text-pink-400 transition-colors font-medium">Classes</a>
+                            <a href="/admission.html"
+                                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Admission</a>
+                        </div>
+                    </div>
+
+                    <!-- About Us -->
+                    <div>
+                        <h4 class="font-bold mb-6 text-xl text-white">About us</h4>
+                        <div class="flex flex-col gap-4">
+                            <a href="/#facilities"
+                                class="text-pink-300 hover:text-yellow-300 transition-colors font-medium">Facilities</a>
+                            <a href="/vacancies.html"
+                                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Vacancies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div class="text-center mt-16 pt-8 border-t border-white/10">
+                <p class="text-yellow-300 text-sm">
+                    Copyright &copy; 2025 <span class="text-pink-400 font-semibold">Vardan Academy</span>. All rights
+                    reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Refined Color Palette */
+  --color-brand-blue: #4F46E5;
+  --color-brand-pink: #EC4899;
+  --color-brand-yellow: #F59E0B;
+  --color-brand-green: #14B8A6;
+  --color-brand-dark: #1E293B;
+
+  /* Background Colors */
+  --color-bg-primary: #F8FAFC;
+  --color-bg-secondary: #F1F5F9;
+
+  /* Typography */
+  --font-heading: "Fredoka", "Quicksand", sans-serif;
+  --font-body: "Inter", "Outfit", sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-medium: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes blob {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-pink);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue);
+}
+
+/* Blob Backgrounds */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-brand-pink);
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-brand-blue);
+  bottom: -150px;
+  left: -150px;
+}
+
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: var(--color-brand-yellow);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-brand-pink), var(--color-brand-blue));
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-large);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Card Enhancements */
+.card-premium {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-soft);
+}
+
+.card-premium:hover {
+  transform: translateY(-12px) rotate(1deg);
+  box-shadow: var(--shadow-large);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-brand-pink), var(--color-brand-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Feature Pills */
+.feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.feature-pill:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Section Spacing */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Item Sizing */
+.carousel-item {
+  width: calc(50% - 8px);
+  /* 2 items minus half gap on mobile */
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    width: calc(25% - 12px);
+    /* 4 items minus 3/4 gap on desktop */
+  }
+}
+
+/* Facilities Carousel Item Sizing */
+.carousel-facilities-item {
+  width: 100%;
+  /* 1 item visible on mobile */
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .carousel-facilities-item {
+    width: calc(33.333% - 11px);
+    /* 3 items minus 2/3 gap on desktop */
+  }
+}
+
+/* Custom Utilities for Brand Colors (Missing from Tailwind Config) */
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+.bg-brand-blue {
+  background-color: var(--color-brand-blue);
+}
+
+.bg-brand-pink {
+  background-color: var(--color-brand-pink);
+}
+
+.bg-brand-green {
+  background-color: var(--color-brand-green);
+}
+
+.bg-brand-yellow {
+  background-color: var(--color-brand-yellow);
+}
+
+.text-brand-dark {
+  color: var(--color-brand-dark);
+}
+
+.text-brand-blue {
+  color: var(--color-brand-blue);
+}
+
+.text-brand-pink {
+  color: var(--color-brand-pink);
+}
+
+.text-brand-green {
+  color: var(--color-brand-green);
+}
+
+.text-brand-yellow {
+  color: var(--color-brand-yellow);
+}
+
+.border-brand-blue {
+  border-color: var(--color-brand-blue);
+}
+
+.border-brand-pink {
+  border-color: var(--color-brand-pink);
+}
+
+.border-brand-green {
+  border-color: var(--color-brand-green);
+}
+
+.border-brand-yellow {
+  border-color: var(--color-brand-yellow);
+}
