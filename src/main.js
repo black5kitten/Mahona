@@ -88,34 +88,54 @@ if (facilitiesContainer && facilitiesPrevBtn && facilitiesNextBtn) {
   });
 }
 
-// Admission Form Logic
+// Admission Form Logic - Save to Google Sheets
 const admissionForm = document.getElementById('admission-form');
 const successMessage = document.getElementById('success-message');
+
+// IMPORTANT: Replace this with your Google Apps Script Web App URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzm8cCAYeOtFSV6TmHh9k42taVHFl1PrjTu1ZPx5L8qSKR_nJBWF7qcz0VVwKXFLKxw/exec';
 
 if (admissionForm && successMessage) {
   admissionForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Simulate loading/processing if needed (optional)
     const submitBtn = admissionForm.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn.innerText;
+
+    // UI Feedback
     submitBtn.innerText = 'Submitting...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      // Hide form
-      admissionForm.style.display = 'none';
+    // Collect Form Data
+    const formData = new FormData(admissionForm);
+    const params = new URLSearchParams();
 
-      // Show success message
-      successMessage.classList.remove('hidden');
+    for (const [key, value] of formData.entries()) {
+      params.append(key, value);
+    }
 
-      // Reset button (in case they reload or go back)
-      submitBtn.innerText = originalBtnText;
-      submitBtn.disabled = false;
-
-      // Scroll to top to see message
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1500); // 1.5s delay for realism
+    // Send to Google Sheets (using no-cors as Apps Script redirects can be tricky)
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Important for Google Apps Script redirects
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: params.toString()
+    })
+      .then(() => {
+        // Since mode is 'no-cors', we won't get a proper JSON response, 
+        // but if it doesn't catch, it's usually successful for this specific use case.
+        admissionForm.style.display = 'none';
+        successMessage.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert('Something went wrong. Please try again later.');
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
   });
 }
 
