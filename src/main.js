@@ -1,3 +1,13 @@
+import i18n from './i18n.js';
+
+// Language Toggle
+const langToggle = document.getElementById('lang-toggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    i18n.toggleLanguage();
+  });
+}
+
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');

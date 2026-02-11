@@ -27,13 +27,14 @@
   <div class="bg-[#ec4899] text-white py-2 px-4 text-sm font-medium flex justify-between items-center">
     <div class="flex gap-6">
       <span class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
-        <i class="fa-solid fa-location-dot"></i> Mahona, U.P
+        <i class="fa-solid fa-location-dot"></i> <span data-i18n="location">Mahona, U.P</span>
       </span>
       <span class="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
-        <i class="fa-solid fa-phone"></i> 999 99 999 99
+        <i class="fa-solid fa-phone"></i> <span data-i18n="phone">999 99 999 99</span>
       </span>
     </div>
-    <div class="flex gap-4">
+    <div class="flex gap-4 items-center">
+      <button id="lang-toggle" class="bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-md text-xs font-semibold transition-colors mr-2">हिन्दी</button>
       <i class="fa-brands fa-x-twitter hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
       <i class="fa-brands fa-facebook hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
       <i class="fa-brands fa-instagram hover:brightness-110 cursor-pointer transition-transform hover:scale-110"></i>
@@ -56,15 +57,15 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-8 font-medium text-gray-600 text-[15px]">
-        <a href="#about" class="hover:text-[#ec4899] transition-colors">About</a>
-        <a href="#facilities" class="hover:text-[#ec4899] transition-colors">Facilities</a>
-        <a href="#events" class="hover:text-[#ec4899] transition-colors">Events</a>
-        <a href="#gallery" class="hover:text-[#ec4899] transition-colors">Gallery</a>
+        <a href="#about" class="hover:text-[#ec4899] transition-colors" data-i18n="nav_about">About</a>
+        <a href="#facilities" class="hover:text-[#ec4899] transition-colors" data-i18n="nav_facilities">Facilities</a>
+        <a href="#events" class="hover:text-[#ec4899] transition-colors" data-i18n="nav_events">Events</a>
+        <a href="#gallery" class="hover:text-[#ec4899] transition-colors" data-i18n="nav_gallery">Gallery</a>
       </nav>
 
       <!-- CTA Button -->
       <a href="admission.html"
-        class="hidden md:inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm tracking-wide">
+        class="hidden md:inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm tracking-wide" data-i18n="enroll_now">
         Enroll Now
       </a>
 
@@ -79,14 +80,14 @@
     <nav id="mobile-menu"
       class="hidden md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 flex-col p-4 shadow-lg absolute w-full left-0">
       <a href="#about"
-        class="block py-3 px-4 hover:bg-brand-pink/10 hover:text-brand-pink rounded-lg transition">About</a>
+        class="block py-3 px-4 hover:bg-brand-pink/10 hover:text-brand-pink rounded-lg transition" data-i18n="nav_about">About</a>
       <a href="#facilities"
-        class="block py-3 px-4 hover:bg-brand-blue/10 hover:text-brand-blue rounded-lg transition">Facilities</a>
+        class="block py-3 px-4 hover:bg-brand-blue/10 hover:text-brand-blue rounded-lg transition" data-i18n="nav_facilities">Facilities</a>
       <a href="#events"
-        class="block py-3 px-4 hover:bg-brand-green/10 hover:text-brand-green rounded-lg transition">Events</a>
+        class="block py-3 px-4 hover:bg-brand-green/10 hover:text-brand-green rounded-lg transition" data-i18n="nav_events">Events</a>
       <a href="#gallery"
-        class="block py-3 px-4 hover:bg-brand-yellow/10 hover:text-brand-yellow rounded-lg transition">Gallery</a>
-      <a href="#" class="block mt-2 text-center btn-primary">Enroll Now</a>
+        class="block py-3 px-4 hover:bg-brand-yellow/10 hover:text-brand-yellow rounded-lg transition" data-i18n="nav_gallery">Gallery</a>
+      <a href="#" class="block mt-2 text-center btn-primary" data-i18n="enroll_now">Enroll Now</a>
     </nav>
   </header>
 
@@ -109,26 +110,24 @@
       <!-- Text Content -->
       <div class="text-center md:text-left animate-fade-in-up">
         <div
-          class="inline-block mb-4 px-4 py-2 bg-brand-yellow/20 backdrop-blur-sm rounded-full text-brand-yellow font-semibold text-sm border border-brand-yellow/30">
+          class="inline-block mb-4 px-4 py-2 bg-brand-yellow/20 backdrop-blur-sm rounded-full text-brand-yellow font-semibold text-sm border border-brand-yellow/30" data-i18n="hero_badge">
           ✨ ICSE Approved Excellence
         </div>
         <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span class="gradient-text">Learning Made</span><br>
-          <span class="text-brand-dark">Fun & Inspiring</span>
+          <span class="gradient-text" data-i18n="hero_title_1">Learning Made</span><br>
+          <span class="text-brand-dark" data-i18n="hero_title_2">Fun & Inspiring</span>
         </h2>
-        <p class="text-lg md:text-xl text-white mb-8 leading-relaxed drop-shadow-lg">
-          Where every child shines with <span class="font-semibold text-brand-yellow">confidence</span>,
-          <span class="font-semibold text-white">curiosity</span>, and
-          <span class="font-semibold text-brand-green">creativity</span>.
+        <p class="text-lg md:text-xl text-white mb-8 leading-relaxed drop-shadow-lg" data-i18n="hero_p">
+          Where every child shines with confidence, curiosity, and creativity.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="classes.html" class="btn-primary inline-flex items-center justify-center gap-2">
-            <span>Explore Classes</span>
+            <span data-i18n="explore_classes">Explore Classes</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
           <a href="#facilities"
             class="glass-panel px-6 py-3 rounded-full font-semibold text-brand-dark hover:shadow-medium transition-all hover:-translate-y-1 inline-flex items-center justify-center gap-2">
-            <span>Our Facilities</span>
+            <span data-i18n="our_facilities">Our Facilities</span>
             <i class="fa-solid fa-building-columns"></i>
           </a>
         </div>
@@ -142,13 +141,13 @@
           <div
             class="absolute -bottom-1 -left-10 rounded-2xl p-4 shadow-medium text-center border-2 border-blue-200 bg-white/70 backdrop-blur-md">
             <div class="text-3xl font-bold text-brand-pink">500+</div>
-            <div class="text-sm text-gray-600">Happy Students</div>
+            <div class="text-sm text-gray-600" data-i18n="happy_students">Happy Students</div>
           </div>
 
           <div
             class="absolute -top-6 -right-2 rounded-2xl p-4 shadow-medium text-center border-2 border-pink-200 bg-white/70 backdrop-blur-md">
             <div class="text-3xl font-bold text-brand-blue">25+</div>
-            <div class="text-sm text-gray-600">Expert Teachers</div>
+            <div class="text-sm text-gray-600" data-i18n="expert_teachers">Expert Teachers</div>
           </div>
         </div>
       </div>
@@ -181,14 +180,14 @@
         <div class="inline-block px- py-2 bg-brand-blue/10 rounded-full text-brand-blue font-semibold text-sm">
           <!--About Us-->
         </div>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-          Welcome to <span class="gradient-text">Vardan Academy</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight" data-i18n="welcome_title">
+          Welcome to Vardan Academy
         </h2>
-        <p class="text-lg text-gray-600 leading-relaxed">
+        <p class="text-lg text-gray-600 leading-relaxed" data-i18n="welcome_p1">
           From kindergarten to senior school, we blend strong academics with sports, arts, and digital skills — all in a
           safe, nurturing environment.
         </p>
-        <p class="text-gray-600 leading-relaxed">
+        <p class="text-gray-600 leading-relaxed" data-i18n="welcome_p2">
           Nestled in the greenery of Mahona (U.P, India), our school provides a comprehensive educational journey with
           state-of-the-art facilities and dedicated educators.
         </p>
@@ -197,23 +196,23 @@
         <div class="flex flex-wrap gap-3">
           <span class="feature-pill bg-blue-50 text-brand-blue">
             <i class="fa-solid fa-book"></i>
-            <span>ICSE Approved</span>
+            <span data-i18n="feature_icse">ICSE Approved</span>
           </span>
           <span class="feature-pill bg-pink-50 text-brand-pink">
             <i class="fa-solid fa-computer"></i>
-            <span>Computer Labs</span>
+            <span data-i18n="feature_computer">Computer Labs</span>
           </span>
           <span class="feature-pill bg-green-50 text-brand-green">
             <i class="fa-solid fa-basketball"></i>
-            <span>Sports Programs</span>
+            <span data-i18n="feature_sports">Sports Programs</span>
           </span>
           <span class="feature-pill bg-yellow-50 text-brand-yellow">
             <i class="fa-solid fa-medal"></i>
-            <span>Competitions</span>
+            <span data-i18n="feature_competitions">Competitions</span>
           </span>
           <span class="feature-pill bg-blue-50 text-brand-blue">
             <i class="fa-solid fa-flask"></i>
-            <span>Science Labs</span>
+            <span data-i18n="feature_science">Science Labs</span>
           </span>
         </div>
       </div>
@@ -228,8 +227,8 @@
 
     <div class="max-w-7xl mx-auto px-4 relative z-10">
       <div class="text-center mb-10">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
-        <p class="text-gray-600 text-lg">Excellence in education with modern facilities</p>
+        <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="why_choose_us">Why Choose Us</h2>
+        <p class="text-gray-600 text-lg" data-i18n="why_choose_subtitle">Excellence in education with modern facilities</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -240,8 +239,8 @@
               class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-pink to-pink-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
               <i class="fa-solid fa-book text-3xl text-white"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">ICSE Approved</h3>
-            <p class="text-gray-600 leading-relaxed">Quality curriculum recognized nationwide, ensuring your child's
+            <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="feature_icse">ICSE Approved</h3>
+            <p class="text-gray-600 leading-relaxed" data-i18n="welcome_p1">Quality curriculum recognized nationwide, ensuring your child's
               bright future.</p>
           </div>
         </div>
@@ -253,8 +252,8 @@
               class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-blue to-blue-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
               <i class="fa-solid fa-computer text-3xl text-white"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">Digital Learning</h3>
-            <p class="text-gray-600 leading-relaxed">Modern computer labs and tech education preparing students for
+            <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="digital_learning">Digital Learning</h3>
+            <p class="text-gray-600 leading-relaxed" data-i18n="digital_p">Modern computer labs and tech education preparing students for
               tomorrow.</p>
           </div>
         </div>
@@ -266,8 +265,8 @@
               class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-brand-green to-teal-400 flex items-center justify-center shadow-medium group-hover:shadow-large transition-all">
               <i class="fa-solid fa-basketball text-3xl text-white"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">Sports & Fitness</h3>
-            <p class="text-gray-600 leading-relaxed">Comprehensive sports programs fostering teamwork and physical
+            <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="sports_fitness">Sports & Fitness</h3>
+            <p class="text-gray-600 leading-relaxed" data-i18n="sports_p">Comprehensive sports programs fostering teamwork and physical
               wellness.</p>
           </div>
         </div>
@@ -282,8 +281,8 @@
         <div class="inline-block px-4 py-2 bg-brand-green/10 rounded-full text-brand-green font-semibold text-sm mb-4">
           <!--Our Infrastructure -->
         </div>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">World-Class Facilities</h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">State-of-the-art infrastructure designed for holistic
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-i18n="facilities_title">World-Class Facilities</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto" data-i18n="facilities_subtitle">State-of-the-art infrastructure designed for holistic
           learning and development</p>
       </div>
 
@@ -313,8 +312,8 @@
               <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-blue/10 flex items-center justify-center">
                 <i class="fa-solid fa-computer text-brand-blue text-xl"></i>
               </div>
-              <p class="font-bold text-gray-800">Computer Lab</p>
-              <p class="text-sm text-gray-500 mt-1">Modern tech education</p>
+              <p class="font-bold text-gray-800" data-i18n="computer_lab">Computer Lab</p>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="digital_learning">Modern tech education</p>
             </div>
           </div>
 
@@ -329,8 +328,8 @@
               <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-pink/10 flex items-center justify-center">
                 <i class="fa-solid fa-flask text-brand-pink text-xl"></i>
               </div>
-              <p class="font-bold text-gray-800">Physics Lab</p>
-              <p class="text-sm text-gray-500 mt-1">Hands-on experiments</p>
+              <p class="font-bold text-gray-800" data-i18n="physics_lab">Physics Lab</p>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="infrastructure">Hands-on experiments</p>
             </div>
           </div>
 
@@ -345,8 +344,8 @@
               <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-green/10 flex items-center justify-center">
                 <i class="fa-solid fa-atom text-brand-green text-xl"></i>
               </div>
-              <p class="font-bold text-gray-800">Chemistry Lab</p>
-              <p class="text-sm text-gray-500 mt-1">Scientific discovery</p>
+              <p class="font-bold text-gray-800" data-i18n="chemistry_lab">Chemistry Lab</p>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="feature_science">Scientific discovery</p>
             </div>
           </div>
 
@@ -361,8 +360,8 @@
               <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-yellow/10 flex items-center justify-center">
                 <i class="fa-solid fa-book-open text-brand-yellow text-xl"></i>
               </div>
-              <p class="font-bold text-gray-800">Biology Lab</p>
-              <p class="text-sm text-gray-500 mt-1">Understanding Life</p>
+              <p class="font-bold text-gray-800" data-i18n="biology_lab">Biology Lab</p>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="feature_science">Understanding Life</p>
             </div>
           </div>
 
@@ -377,8 +376,8 @@
               <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-brand-yellow/10 flex items-center justify-center">
                 <i class="fa-solid fa-book-open text-brand-yellow text-xl"></i>
               </div>
-              <p class="font-bold text-gray-800">Library</p>
-              <p class="text-sm text-gray-500 mt-1">Vast collection</p>
+              <p class="font-bold text-gray-800" data-i18n="library">Library</p>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="prospectus">Vast collection</p>
             </div>
           </div>
         </div>
@@ -396,7 +395,7 @@
 
     <div class="max-w-5xl mx-auto px-4 relative z-10">
       <div class="text-center mb-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Upcoming Events</h2>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800" data-i18n="events_title">Upcoming Events</h2>
       </div>
 
       <div class="card-premium overflow-hidden">
@@ -407,12 +406,12 @@
           <div class="p-8 md:p-12 flex flex-col justify-center">
             <div
               class="inline-block self-start px-4 py-2 bg-brand-pink rounded-full text-white text-sm font-semibold mb-4">
-              <i class="fa-solid fa-calendar-days mr-2"></i>February 25th 2026
+              <i class="fa-solid fa-calendar-days mr-2"></i><span data-i18n="event_date">February 25th 2026</span>
             </div>
-            <h3 class="text-3xl font-bold mb-4 text-gray-800">School Annual Function 2026</h3>
-            <p class="text-gray-600 mb-6 leading-relaxed">Join us for a day of fun, entertainment, and celebration
+            <h3 class="text-3xl font-bold mb-4 text-gray-800" data-i18n="annual_function">School Annual Function 2026</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="annual_p">Join us for a day of fun, entertainment, and celebration
               as we showcase the talents of our students. </p>
-            <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all">
+            <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all" data-i18n="view_past_events">
               <span>View Past Events</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -428,8 +427,8 @@
       <div class="inline-block px-4 py-2 bg-brand-yellow/10 rounded-full text-brand-yellow font-semibold text-sm mb-4">
         <!--Testimonials-->
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">What Parents Say</h2>
-      <p class="text-gray-600 text-lg mb-1">Real stories from our community</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-i18n="parents_say">What Parents Say</h2>
+      <p class="text-gray-600 text-lg mb-1" data-i18n="parents_subtitle">Real stories from our community</p>
 
       <div class="testimonial-carousel relative h-64 md:h-48">
         <!-- Testimonial 1 -->
@@ -484,8 +483,8 @@
   <section id="gallery" class="py-12 md:py-16 bg-bg-secondary">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Moments That Matter</h2>
-        <p class="text-gray-600 text-lg">Capturing joy, learning, and growth</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-i18n="gallery_title">Moments That Matter</h2>
+        <p class="text-gray-600 text-lg" data-i18n="gallery_subtitle">Capturing joy, learning, and growth</p>
       </div>
 
       <div class="relative group">
@@ -585,7 +584,7 @@
             <span class="text-pink-400">Vardan</span> <span class="text-yellow-300">Acad</span><span
               class="text-cyan-300">emy</span>
           </h3>
-          <p class="text-cyan-300 leading-relaxed mb-8 font-medium">
+          <p class="text-cyan-300 leading-relaxed mb-8 font-medium" data-i18n="footer_p">
             Are you seeking a nurturing yet challenging academic environment with exceptional opportunities in sports
             and well-equipped facilities? Discover how our school can empower your child's holistic growth and future
             success.
@@ -610,22 +609,22 @@
         <div class="md:w-5/12 flex flex-col md:flex-row gap-12 md:gap-24">
           <!-- Quick Links -->
           <div>
-            <h4 class="font-bold mb-6 text-xl text-yellow-300">Quick links</h4>
+            <h4 class="font-bold mb-6 text-xl text-yellow-300" data-i18n="quick_links">Quick links</h4>
             <div class="flex flex-col gap-4">
-              <a href="classes.html" class="text-pink-300 hover:text-pink-400 transition-colors font-medium">Classes</a>
+              <a href="classes.html" class="text-pink-300 hover:text-pink-400 transition-colors font-medium" data-i18n="explore_classes">Classes</a>
               <a href="admission.html"
-                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Admission</a>
+                class="text-pink-300 hover:text-blue-300 transition-colors font-medium" data-i18n="admission_enquiry">Admission</a>
             </div>
           </div>
 
           <!-- About Us -->
           <div>
-            <h4 class="font-bold mb-6 text-xl text-white">About us</h4>
+            <h4 class="font-bold mb-6 text-xl text-white" data-i18n="about_us">About us</h4>
             <div class="flex flex-col gap-4">
               <a href="#facilities"
-                class="text-pink-300 hover:text-yellow-300 transition-colors font-medium">Facilities</a>
+                class="text-pink-300 hover:text-yellow-300 transition-colors font-medium" data-i18n="nav_facilities">Facilities</a>
               <a href="vacancies.html"
-                class="text-pink-300 hover:text-blue-300 transition-colors font-medium">Vacancies</a>
+                class="text-pink-300 hover:text-blue-300 transition-colors font-medium" data-i18n="vacancies">Vacancies</a>
             </div>
           </div>
         </div>
@@ -633,7 +632,7 @@
 
       <!-- Bottom Bar -->
       <div class="text-center mt-16 pt-8 border-t border-white/10">
-        <p class="text-yellow-300 text-sm">
+        <p class="text-yellow-300 text-sm" data-i18n="copyright">
           Copyright &copy; 2025 <span class="text-pink-400 font-semibold">Vardan Academy</span>. All rights reserved.
         </p>
       </div>
